@@ -7,9 +7,9 @@ import './style.css';
 const initialFacts = [
   {
     id: 1,
-    text: 'React is being developed by Meta (formerly facebook)',
-    source: 'https://opensource.fb.com/',
-    category: 'technology',
+    text: 'A robot built in the late 1990s called Kismet can recognise emotions through human body language and voice tone.',
+    source: 'https://www.analyticsinsight.net/10-insightful-facts-you-didnt-know-about-artificial-intelligence/',
+    category: 'ai',
     votesInteresting: 24,
     votesMindblowing: 9,
     votesFalse: 4,
@@ -17,10 +17,10 @@ const initialFacts = [
   },
   {
     id: 2,
-    text: 'Millennial dads spend 3 times as much time with their kids than their fathers spent with them. In 1982, 43% of fathers had never changed a diaper. Today, that number is down to 3%',
+    text: 'ERC-20 was proposed by developer Fabin Vogelstellar in 2015 to address the need for a standard within smart contracts on the Ethereum blockchain.',
     source:
-      'https://www.mother.ly/parenting/millennial-dads-spend-more-time-with-their-kids',
-    category: 'society',
+      'https://www.investopedia.com/news/what-erc20-and-what-does-it-mean-ethereum/',
+    category: 'erc-20',
     votesInteresting: 11,
     votesMindblowing: 2,
     votesFalse: 0,
@@ -28,9 +28,9 @@ const initialFacts = [
   },
   {
     id: 3,
-    text: 'Lisbon is the capital of Portugal',
-    source: 'https://en.wikipedia.org/wiki/Lisbon',
-    category: 'society',
+    text: 'The number of DeFi users worldwide is estimated at 4.87 million in 2022.',
+    source: 'https://www.banklesstimes.com/defi-statistics/',
+    category: 'defi',
     votesInteresting: 8,
     votesMindblowing: 3,
     votesFalse: 1,
@@ -112,14 +112,14 @@ function Header({showForm, setShowForm}) {
 }
 
 const CATEGORIES = [
-  {name: 'technology', color: '#3b82f6'},
-  {name: 'science', color: '#16a34a'},
-  {name: 'finance', color: '#ef4444'},
-  {name: 'society', color: '#eab308'},
-  {name: 'entertainment', color: '#db2777'},
-  {name: 'health', color: '#14b8a6'},
-  {name: 'history', color: '#f97316'},
-  {name: 'news', color: '#8b5cf6'},
+  {name: 'ai', color: '#3b82f6'},
+  {name: 'ar', color: '#16a34a'},
+  {name: 'crypto', color: '#ef4444'},
+  {name: 'defi', color: '#eab308'},
+  {name: 'erc-20', color: '#db2777'},
+  {name: 'nft', color: '#14b8a6'},
+  {name: 'vr', color: '#f97316'},
+  {name: 'xr', color: '#8b5cf6'},
 ];
 
 function isValidHttpUrl(string) {
@@ -291,7 +291,7 @@ function Fact({fact, setFacts}) {
           onClick={() => handleVote('votesInteresting')}
           disabled={isUpdating}
         >
-          👍 {fact.votesInteresting}
+          💜 {fact.votesInteresting}
         </button>
         <button onClick={() => handleVote('votesFalse')} disabled={isUpdating}>
           ⛔️ {fact.votesFalse}
