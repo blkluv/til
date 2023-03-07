@@ -196,18 +196,18 @@ const str = `The current fact is "${text}". It is ${calcFactAge(
 console.log(str);
 
 
-const fact = ['Lisbon is the capital of Portugal', 2015, true];
+const fact = ['The number of DeFi users worldwide is estimated at 4.87 million in 2022', 2015, true];
 console.log(fact[2]);
 console.log(fact.length);
 console.log(fact[fact.length - 1]);
 
 const [text, createdIn] = fact;
-const newFact = [...fact, 'society'];
+const newFact = [...fact, 'defi'];
 console.log(newFact);
 
 const factObj = {
-  text: 'Lisbon is the capital of Portugal',
-  category: 'society',
+  text: 'The number of DeFi users worldwide is estimated at 4.87 million in 2022',
+  category: 'defi',
   createdIn: 2015,
   isCorrect: true,
   createSummary: function () {
@@ -251,9 +251,9 @@ console.log(allCategories);
 const initialFacts = [
   {
     id: 1,
-    text: 'React is being developed by Meta (formerly facebook)',
-    source: 'https://opensource.fb.com/',
-    category: 'technology',
+    text: 'A robot built in the late 1990s called Kismet can recognise emotions through human body language and voice tone.',
+    source: 'https://www.analyticsinsight.net/10-insightful-facts-you-didnt-know-about-artificial-intelligence/',
+    category: 'ai',
     votesInteresting: 24,
     votesMindblowing: 9,
     votesFalse: 4,
@@ -261,10 +261,10 @@ const initialFacts = [
   },
   {
     id: 2,
-    text: 'Millennial dads spend 3 times as much time with their kids than their fathers spent with them. In 1982, 43% of fathers had never changed a diaper. Today, that number is down to 3%',
+    text: 'Binance tried to hire Gary Gensler in 2018 for closer ties with U.S. regulators: Report',
     source:
-      'https://www.mother.ly/parenting/millennial-dads-spend-more-time-with-their-kids',
-    category: 'society',
+      'https://cointelegraph.com/news/binance-tried-to-hire-gary-gensler-in-2018-for-closer-ties-with-u-s-regulators-report',
+    category: 'crypto news',
     votesInteresting: 11,
     votesMindblowing: 2,
     votesFalse: 0,
@@ -272,9 +272,9 @@ const initialFacts = [
   },
   {
     id: 3,
-    text: 'Lisbon is the capital of Portugal',
-    source: 'https://en.wikipedia.org/wiki/Lisbon',
-    category: 'society',
+    text: 'The number of DeFi users worldwide is estimated at 4.87 million in 2022.',
+    source: 'https://www.banklesstimes.com/defi-statistics/',
+    category: 'defi',
     votesInteresting: 8,
     votesMindblowing: 3,
     votesFalse: 1,
