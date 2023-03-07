@@ -112,14 +112,14 @@ function Header({showForm, setShowForm}) {
 }
 
 const CATEGORIES = [
-  {name: 'ai', color: '#3b82f6'},
-  {name: 'ar', color: '#16a34a'},
-  {name: 'crypto', color: '#ef4444'},
-  {name: 'defi', color: '#eab308'},
-  {name: 'erc-20', color: '#db2777'},
-  {name: 'nft', color: '#14b8a6'},
-  {name: 'vr', color: '#f97316'},
-  {name: 'xr', color: '#8b5cf6'},
+  {name: 'ai', color: '#8b5cf6'},
+  {name: 'ar', color: '#3b82f6'},
+  {name: 'defi', color: '#16a34a'},
+  {name: 'erc-20', color: '#eab308'},
+  {name: 'meta', color: '#14b8a6'},
+  {name: 'nft', color: '#f97316'},
+  {name: 'vr', color: '#db2777'},
+  {name: 'xr', color: '#ef4444'},
 ];
 
 function isValidHttpUrl(string) {
