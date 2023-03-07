@@ -117,7 +117,7 @@ console.log([7, 64, 6, -23, 11].find((el) => el > 10));
 /*
 let votesInteresting = 23;
 let votesMindblowing = 5;
-const text = 'Lisbon is the capital of Portugal';
+const text = 'The number of DeFi users worldwide is estimated at 4.87 million in 2022';
 
 votesInteresting = votesInteresting + 1;
 votesInteresting++;
@@ -184,7 +184,7 @@ const message =
     : 'Might be false, check more sources ...';
 // alert(message);
 
-const text = 'Lisbon is the capital of Portugal';
+const text = 'The number of DeFi users worldwide is estimated at 4.87 million in 2022';
 const upperText = text.toUpperCase();
 console.log(upperText);
 
