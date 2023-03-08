@@ -58,7 +58,7 @@ loadFacts();
 
 async function loadFacts() {
   const res = await fetch(
-    'https://jixkwpgwbrzsliyprmje.supabase.co',
+    'https://jixkwpgwbrzsliyprmje.supabase.co/rest/v1/facts/',
     {
       headers: {
         apikey:
