@@ -48,6 +48,7 @@ function App() {
     function () {
       async function getFacts() {
         setIsLoading(true);
+        
       
         // Query for facts
         let factsQuery = supabase.from('facts').select('*');
@@ -294,7 +295,7 @@ function Fact({fact, setFacts}) {
         className="tag"
         style={{
           backgroundColor: CATEGORIES.find((cat) => cat.name === fact.category)
-            .color,
+            ?.color,
         }}
       >
         {fact.category}
@@ -305,6 +306,12 @@ function Fact({fact, setFacts}) {
           disabled={isUpdating}
         >
           💜 {fact.votesInteresting}
+        </button>
+        <button
+          onClick={() => handleVote('votesMindblowing')}
+          disabled={isUpdating}
+        >
+          🤯 {fact.votesMindblowing}
         </button>
         <button onClick={() => handleVote('votesFalse')} disabled={isUpdating}>
           ⛔️ {fact.votesFalse}
