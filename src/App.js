@@ -48,20 +48,33 @@ function App() {
     function () {
       async function getFacts() {
         setIsLoading(true);
-
-        let query = supabase.from('facts').select('*');
-
-        if (currentCategory !== 'all')
-          query = query.eq('category', currentCategory);
-
-        const {data: facts, error} = await query
-          .order('votesInteresting', {ascending: false})
-          .limit(1000);
-
-        if (!error) setFacts(facts);
-        else alert('There was a problem retrieving the facts!');
+      
+        // Query for facts
+        let factsQuery = supabase.from('facts').select('*');
+        if (currentCategory !== 'all') {
+          factsQuery = factsQuery.eq('category', currentCategory);
+        }
+        factsQuery = factsQuery.order('votesInteresting', {ascending: false}).limit(1000);
+      
+        // Query for users
+        const usersQuery = supabase.from('users').select('*');
+      
+        const {data: facts, error: factsError} = await factsQuery;
+        const {data: users, error: usersError} = await usersQuery;
+      
+        if (!factsError && !usersError) {
+          // Combine facts and users data into a single array of objects
+          const factsAndUsers = facts.map((fact) => {
+            const user = users.find((u) => u.id === fact.userId);
+            return {...fact, user};
+          });
+          setFacts(factsAndUsers);
+        } else {
+          alert('There was a problem retrieving the facts!');
+        }
+      
         setIsLoading(false);
-      }
+      }      
       getFacts();
     },
     [currentCategory]
